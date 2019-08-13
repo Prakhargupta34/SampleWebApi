@@ -1,0 +1,16 @@
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.csprojResolveAssemblyReference.cache
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.csproj.CoreCompileInputs.cache
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.AssemblyInfoInputs.cache
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.AssemblyInfo.cs
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.Tests.deps.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.Tests.runtimeconfig.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.Tests.runtimeconfig.dev.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.Tests.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.Tests.pdb
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\obj\Debug\netcoreapp2.2\SampleWebApi.Tests.pdb
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi.Tests\bin\Debug\netcoreapp2.2\SampleWebApi.pdb
