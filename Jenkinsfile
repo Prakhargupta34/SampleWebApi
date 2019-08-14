@@ -33,6 +33,10 @@ pipeline {
             }
             steps {
                 sh '''
+				echo "----------------------------Build Project Started-----------------------------"
+				dotnet${NETCORE_VERSION} build ${SOLUTION_FILE_PATH} -p:Configuration=release -v:n
+				echo "----------------------------Build Project Completed-----------------------------"
+				
                 echo "----------------------------Test Project Started-----------------------------"
 				dotnet${NETCORE_VERSION} test ${TEST_FILE_PATH}
 				echo "----------------------------Test Project Completed-----------------------------"
