@@ -3,7 +3,7 @@ pipeline {
     parameters {
         string(name: 'GIT_HTTPS_PATH', defaultValue: 'https://github.com/tavisca-pgupta/SampleWebApi.git')
 		string(name: 'GIT_TEST_PATH', defaultValue: 'SampleWebApi.Tests/SampleWebApi.Tests.csproj')
-		string(name: 'SOLUTION_FILE_PATH', defaultValue: 'https://github.com/tavisca-pgupta/SampleWebApi.git')
+		string(name: 'SOLUTION_FILE_PATH', defaultValue: 'SampleWebApi.sln')
 		string(name: 'NETCORE_VERSION', defaultValue: '')
 		choice(name: 'RELEASE_ENVIRONMENT', choices: ['Build', 'Test', 'Both'])
   }
