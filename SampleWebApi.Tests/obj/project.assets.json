@@ -10193,8 +10193,8 @@
     },
     "SampleWebApi/1.0.0": {
       "type": "project",
-      "path": "../Sample WebApi/SampleWebApi.csproj",
-      "msbuildProject": "../Sample WebApi/SampleWebApi.csproj"
+      "path": "../SampleWebApi/SampleWebApi.csproj",
+      "msbuildProject": "../SampleWebApi/SampleWebApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10239,8 +10239,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\Sample WebApi\\SampleWebApi.csproj": {
-              "projectPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\Sample WebApi\\SampleWebApi.csproj"
+            "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\SampleWebApi\\SampleWebApi.csproj": {
+              "projectPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\SampleWebApi\\SampleWebApi.csproj"
             }
           }
         }

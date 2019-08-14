@@ -9,3 +9,13 @@ C:\Users\pgupta\source\repos\Sample WebApi\Sample WebApi\obj\Debug\netcoreapp1.1
 C:\Users\pgupta\source\repos\Sample WebApi\Sample WebApi\obj\Debug\netcoreapp1.1\SampleWebApi.AssemblyInfo.cs
 C:\Users\pgupta\source\repos\Sample WebApi\Sample WebApi\obj\Debug\netcoreapp1.1\SampleWebApi.dll
 C:\Users\pgupta\source\repos\Sample WebApi\Sample WebApi\obj\Debug\netcoreapp1.1\SampleWebApi.pdb
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\bin\Debug\netcoreapp1.1\SampleWebApi.deps.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\bin\Debug\netcoreapp1.1\SampleWebApi.runtimeconfig.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\bin\Debug\netcoreapp1.1\SampleWebApi.runtimeconfig.dev.json
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\bin\Debug\netcoreapp1.1\SampleWebApi.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\bin\Debug\netcoreapp1.1\SampleWebApi.pdb
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\obj\Debug\netcoreapp1.1\SampleWebApi.csproj.CoreCompileInputs.cache
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\obj\Debug\netcoreapp1.1\SampleWebApi.AssemblyInfoInputs.cache
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\obj\Debug\netcoreapp1.1\SampleWebApi.AssemblyInfo.cs
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\obj\Debug\netcoreapp1.1\SampleWebApi.dll
+C:\Users\pgupta\source\repos\Sample WebApi\SampleWebApi\obj\Debug\netcoreapp1.1\SampleWebApi.pdb

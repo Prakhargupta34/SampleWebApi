@@ -9758,11 +9758,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\Sample WebApi\\SampleWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\SampleWebApi\\SampleWebApi.csproj",
       "projectName": "SampleWebApi",
-      "projectPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\Sample WebApi\\SampleWebApi.csproj",
+      "projectPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\SampleWebApi\\SampleWebApi.csproj",
       "packagesPath": "C:\\Users\\pgupta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\Sample WebApi\\obj\\",
+      "outputPath": "C:\\Users\\pgupta\\source\\repos\\Sample WebApi\\SampleWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pgupta\\AppData\\Roaming\\NuGet\\NuGet.Config",

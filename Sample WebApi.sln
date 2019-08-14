@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApi", "Sample WebApi\SampleWebApi.csproj", "{FB29DD19-0627-43FA-996E-8BC64FCCA9CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApi", "SampleWebApi\SampleWebApi.csproj", "{FB29DD19-0627-43FA-996E-8BC64FCCA9CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApi.Tests", "SampleWebApi.Tests\SampleWebApi.Tests.csproj", "{A49DDFB7-467E-447A-96CA-45084DBEF5D4}"
 EndProject
