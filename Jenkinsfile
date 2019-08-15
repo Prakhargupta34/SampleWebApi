@@ -21,6 +21,14 @@ pipeline {
 				echo "----------------------------Test Project Started-----------------------------"
 				dotnet test $ENV:WORKSPACE\\$($env:TEST_FILE_PATH)
 				echo "----------------------------Test Project Completed-----------------------------"
+				
+				echo "----------------------------Publishing Project Started-----------------------------"
+				dotnet publish -c Release
+				echo "----------------------------Publishing Project Completed-----------------------------"
+				
+				echo "----------------------------Archiving Project Started-----------------------------"
+				7z a archive.zip $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\publish\\
+				echo "----------------------------Archiving Project Completed-----------------------------"
 				'''
 			}
 			}
@@ -29,7 +37,7 @@ pipeline {
             steps {
                 powershell '''
 				echo "----------------------------Deploying Project Started-----------------------------"
-				dotnet publish -c Release
+				
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
