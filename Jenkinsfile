@@ -30,7 +30,7 @@ pipeline {
                 powershell '''
 				echo "----------------------------Deploying Project Started-----------------------------"
 				dotnet publish -c Release
-				dotnet $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\SampleWebApi.dll
+				dotnet $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\publish\\SampleWebApi.dll
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
@@ -39,7 +39,6 @@ pipeline {
 	post{
              success{
                  archiveArtifacts artifacts: '**', fingerprint:true
-                 bat 'dotnet WebApplication10/bin/Release/netcoreapp2.2/WebApplication10.dll'
              }
         }
 }
