@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 powershell '''
-                git clone $($env:GIT_HTTPS_PATH)
                 echo "----------------------------Restore Project Started-----------------------------"
 				dotnet restore $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH) --source https://api.nuget.org/v3/index.json
 				echo "----------------------------Restore Project Completed-----------------------------"
@@ -31,7 +30,7 @@ pipeline {
                 powershell '''
 				echo "----------------------------Deploying Project Started-----------------------------"
 				dotnet publish -c Release
-				dotnet $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH)
+				dotnet $ENV:WORKSPACE\\$SampleWebApi\\bin\\Release\\netcoreapp1.1\\publish\\SampleWebApi.dll
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
