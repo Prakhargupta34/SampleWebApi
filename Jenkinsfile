@@ -10,24 +10,21 @@ pipeline {
         stage('Build') {
             steps {
                 powershell '''
-                echo "----------------------------Restore Project Started-----------------------------"
-				dotnet restore $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH) --source https://api.nuget.org/v3/index.json
-				echo "----------------------------Restore Project Completed-----------------------------"
-				
+               
 				echo "----------------------------Build Project Started-----------------------------"
-				dotnet build $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH) -p:Configuration=release -v:n
+				dotnet build $($env:SOLUTION_FILE_PATH) -p:Configuration=release -v:n
 				echo "----------------------------Build Project Completed-----------------------------"
 				
 				echo "----------------------------Test Project Started-----------------------------"
-				dotnet test $ENV:WORKSPACE\\$($env:TEST_FILE_PATH)
+				dotnet test $($env:TEST_FILE_PATH)
 				echo "----------------------------Test Project Completed-----------------------------"
 				
 				echo "----------------------------Publishing Project Started-----------------------------"
-				dotnet publish -c Release
+				dotnet publish $($env:SOLUTION_PATH) -c Release
 				echo "----------------------------Publishing Project Completed-----------------------------"
 				
 				echo "----------------------------Archiving Project Started-----------------------------"
-				7z a archive.zip $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\publish\\
+				compress-archive SampleWebApi\\bin\\Release\\netcoreapp1.1\\publish\\* artifact.zip -Update
 				echo "----------------------------Archiving Project Completed-----------------------------"
 				'''
 			}
@@ -37,15 +34,11 @@ pipeline {
             steps {
                 powershell '''
 				echo "----------------------------Deploying Project Started-----------------------------"
-				
+				expand-archive artifact.zip ./ -Force
+				dotnet SampleWebApi.dll
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
         }
     }
-	post{
-             success{
-                 archiveArtifacts artifacts: '**', fingerprint:true
-             }
-        }
 }
