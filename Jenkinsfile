@@ -30,7 +30,7 @@ pipeline {
                 powershell '''
 				echo "----------------------------Deploying Project Started-----------------------------"
 				dotnet publish -c Release
-				dotnet run $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\SampleWebApi.dll
+				dotnet $ENV:WORKSPACE\\SampleWebApi\\bin\\Release\\netcoreapp1.1\\SampleWebApi.dll
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
