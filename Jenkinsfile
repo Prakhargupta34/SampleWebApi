@@ -4,50 +4,37 @@ pipeline {
         string(name: 'GIT_HTTPS_PATH', defaultValue: 'https://github.com/tavisca-pgupta/SampleWebApi.git')
 		string(name: 'GIT_TEST_PATH', defaultValue: 'SampleWebApi.Tests/SampleWebApi.Tests.csproj')
 		string(name: 'SOLUTION_FILE_PATH', defaultValue: 'SampleWebApi.sln')
-		string(name: 'NETCORE_VERSION', defaultValue: '')
-		choice(name: 'RELEASE_ENVIRONMENT', choices: ['Build', 'Test', 'Both'])
   }
+ 
     stages {
         stage('Build') {
-			when
-            {
-                expression { params.RELEASE_ENVIRONMENT == 'Build' || params.RELEASE_ENVIRONMENT == 'Both'}
-            }
             steps {
-                sh '''
+                powershell '''
+                git clone $($env:GIT_HTTPS_PATH)
                 echo "----------------------------Restore Project Started-----------------------------"
-				dotnet${NETCORE_VERSION} restore ${SOLUTION_FILE_PATH} --source https://api.nuget.org/v3/index.json
+				dotnet restore $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH) --source https://api.nuget.org/v3/index.json
 				echo "----------------------------Restore Project Completed-----------------------------"
 				
 				echo "----------------------------Build Project Started-----------------------------"
-				dotnet${NETCORE_VERSION} build ${SOLUTION_FILE_PATH} -p:Configuration=release -v:n
-				echo "----------------------------Build Project Completed-----------------------------"
-				'''
-			}
-			}
-				
-		stage('Test') {
-			when
-            {
-                expression { params.RELEASE_ENVIRONMENT == 'Test' || params.RELEASE_ENVIRONMENT == 'Both'}
-            }
-            steps {
-                sh '''
-				echo "----------------------------Build Project Started-----------------------------"
-				dotnet${NETCORE_VERSION} build ${SOLUTION_FILE_PATH} -p:Configuration=release -v:n
+				dotnet build $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH) -p:Configuration=release -v:n
 				echo "----------------------------Build Project Completed-----------------------------"
 				
-                echo "----------------------------Test Project Started-----------------------------"
-				dotnet${NETCORE_VERSION} test ${TEST_FILE_PATH}
+				echo "----------------------------Test Project Started-----------------------------"
+				dotnet test $ENV:WORKSPACE\\$($env:TEST_FILE_PATH)
 				echo "----------------------------Test Project Completed-----------------------------"
 				'''
+			}
+			}
+				
+		stage('Deploy') {
+            steps {
+                powershell '''
+				echo "----------------------------Deploying Project Started-----------------------------"
+				dotnet publish -c Release
+				dotnet $ENV:WORKSPACE\\$($env:SOLUTION_FILE_PATH)
+				echo "----------------------------Deploying Project Completed-----------------------------"
+				'''
             }
-        }
-    }
-
-	post { 
-        always { 
-            cleanWs()
         }
     }
 }
