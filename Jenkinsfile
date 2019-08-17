@@ -4,7 +4,9 @@ pipeline {
 		string(name: 'GIT_TEST_PATH', defaultValue: 'SampleWebApi.Tests/SampleWebApi.Tests.csproj')
 		string(name: 'SOLUTION_FILE_PATH', defaultValue: 'SampleWebApi.sln')
 		string(name: 'PROJECT_NAME', defaultValue: 'SampleWebApi')
-		string(name: 'PORT_NO', defaultValue: '5064')
+		string(name: 'DOCKER_USERNAME', defaultValue: 'prakhargupta34')
+		string(name: 'DOCKER_PASSWORD')
+		string(name: 'DOCKER_REPO_NAME', defaultValue: 'samplewebapi')
   }
  
     stages {
@@ -24,9 +26,9 @@ pipeline {
 				dotnet publish %SOLUTION_PATH% -c Release -o ../publish
 				echo "----------------------------Publishing Project Completed-----------------------------"
 				
-				echo "----------------------------Docker Image Started-----------------------------"
-				docker build --tag=pipe --build-arg project_name=%PROJECT_NAME%.dll .
-				echo "----------------------------Docker Image Completed-----------------------------"
+				echo "----------------------------Docker Image Build Started-----------------------------"
+				docker build --tag=%DOCKER_USERNAME%/%DOCKER_REPO_NAME% --build-arg project_name=%PROJECT_NAME%.dll .
+				echo "----------------------------Docker Image Build Completed-----------------------------"
 				'''
 			}
 			}
@@ -35,8 +37,8 @@ pipeline {
             steps {
                 bat '''
 				echo "----------------------------Deploying Project Started-----------------------------"
-				docker run -p %PORT_NO%:80 pipe
-				echo "Listening on %PORT_NO%"
+				docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
+				docker push %DOCKER_USERNAME%/%DOCKER_REPO_NAME%:latest
 				echo "----------------------------Deploying Project Completed-----------------------------"
 				'''
             }
