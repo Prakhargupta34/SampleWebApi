@@ -5,6 +5,7 @@
     <RootNamespace>SampleWebApi.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
+	<ProjectGuid>{A49DDFB7-467E-447A-96CA-45084DBEF5D4}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
