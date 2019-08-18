@@ -3,9 +3,9 @@ C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\bin\Release\netcoreapp2.2
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\bin\Release\netcoreapp2.2\SampleWebApi.runtimeconfig.dev.json
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\bin\Release\netcoreapp2.2\SampleWebApi.dll
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\bin\Release\netcoreapp2.2\SampleWebApi.pdb
-C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.csprojResolveAssemblyReference.cache
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.csproj.CoreCompileInputs.cache
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.AssemblyInfoInputs.cache
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.AssemblyInfo.cs
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.dll
 C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.pdb
+C:\Users\pgupta\source\repos\SampleWebApi\SampleWebApi\obj\Release\netcoreapp2.2\SampleWebApi.csprojAssemblyReference.cache
